@@ -14,12 +14,6 @@ import Contact from "./Contact";
 import Projects from "./Projects";
 import { useInView, InViewHookResponse } from "react-intersection-observer";
 
-interface Section {
-  ref: React.RefObject<HTMLDivElement>;
-  inView: boolean;
-  entry: IntersectionObserverEntry | undefined;
-}
-
 const MainPage: React.FC = () => {
   // Define refs and inView states for each section
   const sections: Record<string, InViewHookResponse> = {

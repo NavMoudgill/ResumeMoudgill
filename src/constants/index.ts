@@ -1,8 +1,5 @@
 import { SvgIconProps } from "@mui/material";
 import { MdHistoryEdu } from "react-icons/md";
-import LightbulbIcon from "@mui/icons-material/Lightbulb";
-import NearMeIcon from "@mui/icons-material/NearMe";
-import { BsFillMotherboardFill } from "react-icons/bs";
 import { MdPerson2 } from "react-icons/md";
 import { PiDevicesLight } from "react-icons/pi";
 import { FaLightbulb } from "react-icons/fa";

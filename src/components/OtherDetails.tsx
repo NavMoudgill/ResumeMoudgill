@@ -1,5 +1,3 @@
-import Button from "./sharedComponents/Button";
-
 const OtherDetails = ({
   val,
 }: {

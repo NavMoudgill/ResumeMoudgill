@@ -1,4 +1,3 @@
-import React from "react";
 import styles from "../styles";
 import { SKILLS_LIST } from "../constants";
 import IconSkill from "./IconSkill";

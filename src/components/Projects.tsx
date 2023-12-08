@@ -1,5 +1,4 @@
-import SlidingWithDiv from "./sharedComponents/SlidingWithDiv";
-import { PROJECTS_LIST, PROJECTS_IMAGES } from "../constants";
+import { PROJECTS_LIST } from "../constants";
 import ProjectCard from "./sharedComponents/ProjectCard";
 import styles from "../styles";
 

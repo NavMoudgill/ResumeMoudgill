@@ -1,4 +1,3 @@
-import React from "react";
 import { ICONS } from "../constants";
 const IconSkill = () => {
   return ICONS?.map((item, index) => (

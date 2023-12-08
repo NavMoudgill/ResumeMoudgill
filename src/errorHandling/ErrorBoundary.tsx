@@ -18,7 +18,7 @@ export class ErrorBoundaryApp extends Component<
       hasError: false,
     };
   }
-  static getDerivedStateFromError(error: Error) {
+  static getDerivedStateFromError() {
     return { hasError: true };
   }
   componentDidCatch(error: Error, info: React.ErrorInfo) {
