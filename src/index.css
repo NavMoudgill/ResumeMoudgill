@@ -1,0 +1,190 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+:root{
+  --typewriterspeed:5s;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+body::-webkit-scrollbar {
+  width: 12px;
+}
+body::-webkit-scrollbar-thumb {
+  background-color: transparent; 
+}
+.left-navbar {
+  overflow-y: hidden; 
+}
+
+.left-navbar::-webkit-scrollbar {
+  width: 12px; 
+}
+
+.left-navbar::-webkit-scrollbar-thumb {
+  background-color: transparent; 
+}
+* {
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+}   
+/* home   */
+.typewriter h1{
+position:relative;
+width: fit-content;
+letter-spacing: 0.15em;
+
+}
+.typewriter h1::before,.typewriter h1::after{
+  content: "";
+  left: 0;
+  position: absolute;
+  right: 0;
+  top:0;
+  bottom: 0;
+}
+.typewriter h1::before{
+  background-color: white; 
+  animation: typing var(--typewriterspeed) steps(20) 1s forwards;
+
+}
+.typewriter h1::after{
+  width: 0.125em;
+  background: black;
+  animation: typing var(--typewriterspeed) steps(20) 1s forwards, blink-caret 750ms steps(20)  infinite;
+}
+.typewriter h2{
+  opacity: 0;
+  transform: translateY(100px);
+  animation: fadeIn 1s ease-in-out 6s forwards;
+}
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform:translateY(0px)
+  }
+}
+@keyframes typing {
+to {
+    left: 100%;
+  }
+}
+
+@keyframes blink-caret {
+to {background:transparent }
+} 
+/* all components heading animation */
+ .card{
+transform: translateX(-100px);
+opacity: 0;
+}
+.show{
+animation: fade 1s ease  forwards  ;   
+}
+ @keyframes fade {
+  50% {
+    opacity: 1;
+    transform:translateX(100px)
+  }
+  100%{
+    opacity: 1;
+    transform:translateX(0px)
+  }
+} 
+/* home component heading*/
+.child-color-animation{
+  animation: top-to-bottom 1s linear infinite alternate;
+}
+@keyframes top-to-bottom {
+  from {
+    transform: translateY(5px);
+  }
+  to {
+    transform: translateY(37px);
+  }
+}
+/* skills component logos*/
+.shine-with-rotation{
+  animation: shineRotation 2s linear infinite alternate;
+}
+@keyframes shineRotation {
+  from {
+    background-image: linear-gradient(250deg, black , gray,rgb(75, 71, 71));
+    transform:rotateY(0deg);
+
+  }
+
+  to {
+    background-image: linear-gradient(250deg, gray , black,rgb(75, 71, 71));
+    transform:rotateY(35deg);
+
+  }
+}
+
+
+@layer components {
+  /* Slideshow container */
+  .slideshow-container {
+    @apply relative overflow-hidden h-[70vh] min-w-[70vw] flex;
+  }
+
+  li {
+    cursor: pointer;
+  }
+/* slider component */  
+.aspect-ratio-container {
+    @apply relative  h-0 pb-[56.25%]; /* 16:9 aspect ratio, adjust as needed */
+  }
+  .aspectWithForSlideshow{
+    @apply  w-full
+
+  }
+.aspectWithForSlidingWithDiv{
+  @apply  w-[50%]
+}
+  .aspect-ratio-container img {
+    @apply absolute inset-0 w-full h-full object-cover;
+  }
+
+  /* Next & previous buttons */
+  .prev,
+  .next {
+    @apply cursor-pointer absolute top-1/2 px-2 sm:px-3 xl:px-4 py-2 bg-black text-white font-bold text-xl transition duration-700 ease-in-out select-none w-[auto] mt-[-11px] rounded-sm;
+  }
+
+  .next {
+    @apply right-0 rounded-sm;
+  }
+
+  .prev:hover,
+  .next:hover {
+    @apply bg-black bg-opacity-80;
+  }
+
+  /* Caption text */
+  .text {
+    @apply absolute bottom-8 w-full text-center text-white text-base px-4 py-2;
+  }
+
+  /* Fading animation */
+  .mySlides {
+    @apply transition-all duration-1000 ease-in-out;
+  }
+
+  .mySlides.active {
+    @apply opacity-25;
+  }
+  .mySlides.activeSlidingDiv {
+    @apply opacity-100;
+  }
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev,
+  .next,
+  .text {
+    @apply text-sm;
+  }
+}
