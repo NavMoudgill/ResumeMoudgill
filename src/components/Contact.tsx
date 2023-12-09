@@ -62,13 +62,8 @@ const Contact = ({
     }
   };
   return (
-    <div className="relative text-white  justify-center flex flex-col items-start  bg-black min-h-[85vh] lg:h-full">
-      <video
-        muted
-        autoPlay
-        loop
-        className="min-h-[85vh] object-cover lg:h-full"
-      >
+    <div className="relative text-white  justify-center flex flex-col items-start  bg-black min-h-[85vh] ">
+      <video muted autoPlay loop className="min-h-[85vh] object-cover ">
         <source src="contact.mp4" type="video/mp4" />
       </video>
       <div className=" absolute top-0 left-0  flex flex-col justify-between w-[100%] px-14 py-10 object-cover my-auto h-full">
