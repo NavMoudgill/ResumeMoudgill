@@ -108,22 +108,22 @@ export interface ExperienceListProps {
 }
 export const EXPERIENCE_LIST: Array<ExperienceListProps> = [
   {
-    yr: "2022 – 2023",
+    yr: "2022 - 2023",
     place: "Pronto Intervento Sociale Lt1-Lt2",
     companyName: "Mediatrice di lingua Punjabi,Inglese-Italiano",
   },
   {
-    yr: "2021 – 2022",
+    yr: "2021 - 2022",
     place: "Latina, Italia",
     companyName: "Traduttrice in Procura di Latina",
   },
   {
-    yr: "2020 – 2019",
+    yr: "2020 - 2019",
     place: "Latina, Italia",
     companyName: "L'insegnante in Astrolabio",
   },
   {
-    yr: "2018 – 2022",
+    yr: "2018 - 2022",
     place: "G.Marconi,Latina",
     companyName: "Programmatrice Front-End e Back-end",
   },
@@ -148,15 +148,7 @@ export const PROJECTS_LIST: Array<ProjectsListProps> = [
     link: "https://github.com/NavMoudgill/facebookPageProject",
     photo: "hooBank.png",
     description: "One Page Facebook Clone",
-    hashtags: ["React", "JS", "HTML", "CSS"],
-  },
-  {
-    yr: "12/2023",
-    name: "Portfoglio",
-    link: "https://www.big-enterprise.online/",
-    photo: "portfoglio.png",
-    description: "Portfoglio",
-    hashtags: ["React", "JS", "HTML", "CSS"],
+    hashtags: ["React", "JS", "HTML", "CSS", "VITE"],
   },
   {
     yr: "10/2023",
@@ -174,6 +166,14 @@ export const PROJECTS_LIST: Array<ProjectsListProps> = [
       "express",
       "mysql",
     ],
+  },
+  {
+    yr: "12/2023",
+    name: "News App",
+    link: "https://www.big-enterprise.online/",
+    photo: "newsChanel.png",
+    description: "newsChanel",
+    hashtags: ["React", "JS", "HTML", "CSS"],
   },
 ];
 export const EDUCATION_LIST: Array<ExperienceListProps> = [
