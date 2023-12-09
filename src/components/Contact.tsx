@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { toast } from "react-toastify";
 
 import emailjs from "@emailjs/browser";
 interface FormTypes {
@@ -25,8 +26,7 @@ const Contact = ({
 
   const handleSubmit = async (e: any) => {
     e.preventDefault();
-    console.log(import.meta.env.VITE_REACT_APP_SERVICE_ID);
-    console.log(form);
+
     const { name, email, message } = form;
     try {
       const templateParams = {
@@ -37,14 +37,14 @@ const Contact = ({
         message: message,
       };
       if (!name || name.trim() === "" || name.length < 3) {
-        return alert("Please enter a valid name");
+        return toast.warning("Please enter a valid name");
       }
       const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
       if (!email || email.trim() === "" || !emailRegex.test(email as string)) {
-        return alert("Please enter a valid email address");
+        return toast.warning("Please enter a valid email");
       }
       if (!message || message.trim() === "" || message.length < 3) {
-        return alert("Please enter a valid message");
+        return toast.warning("Please enter a valid message");
       }
       const response = await emailjs.send(
         import.meta.env.VITE_REACT_APP_SERVICE_ID,
@@ -54,7 +54,7 @@ const Contact = ({
       );
 
       if (response) {
-        alert("Message sent successfully");
+        toast.success("Message sent successfully");
         setForm({ name: "", email: "", message: "" });
       }
     } catch (error) {
