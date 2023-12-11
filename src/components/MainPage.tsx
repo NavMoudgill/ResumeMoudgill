@@ -1,6 +1,5 @@
 import { Suspense, useEffect } from "react";
 import Footer from "./Footer";
-import { CircularProgress } from "@mui/material";
 import Navbar from "./Navbar";
 import styles from "../styles";
 import NavbarList from "./NavbarList";
@@ -13,6 +12,7 @@ import OtherDetails from "./OtherDetails";
 import Contact from "./Contact";
 import Projects from "./Projects";
 import { useInView, InViewHookResponse } from "react-intersection-observer";
+import CircularProgress from "./sharedComponents/CircularProgress";
 
 const MainPage: React.FC = () => {
   // Define refs and inView states for each section
@@ -53,7 +53,7 @@ const MainPage: React.FC = () => {
         </div>
       </div>
       <div className="lg:absolute lg:right-0 lg:top-0 lg:w-[80%]">
-        <Suspense fallback={<CircularProgress sx={{ marginTop: "10rem" }} />}>
+        <Suspense fallback={<CircularProgress />}>
           <Home />
           <About val={sections.about.ref} />
           <Education val={sections.education.ref} />

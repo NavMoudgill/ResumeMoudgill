@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import React, { Suspense, useState } from "react";
 import { toast } from "react-toastify";
 
 import emailjs from "@emailjs/browser";
+import CircularProgress from "./sharedComponents/CircularProgress";
 interface FormTypes {
   name: String;
   email: String;
@@ -63,9 +64,12 @@ const Contact = ({
   };
   return (
     <div className="relative text-white  justify-center flex flex-col items-start  bg-black min-h-[85vh] ">
-      <video muted autoPlay loop className="min-h-[85vh] object-cover ">
-        <source src="contact.mp4" type="video/mp4" />
-      </video>
+      <Suspense fallback={<CircularProgress />}>
+        <video muted autoPlay loop className="min-h-[85vh] object-cover ">
+          <source src="contact.mp4" type="video/mp4" />
+        </video>
+      </Suspense>
+
       <div className=" absolute top-0 left-0  flex flex-col justify-between w-[100%] px-14 py-10 object-cover my-auto h-full">
         <h1 className="top-0 left-0 mb-5  text-3xl card" ref={val}>
           Contatto

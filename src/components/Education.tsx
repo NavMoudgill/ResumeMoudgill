@@ -13,7 +13,7 @@ const Education = ({
     >
       <div className="my-20 lg:mx-5 w-full sm:w-[70%] lg:w-[60%]">
         <h1 className=" text-3xl mb-6 card" ref={val}>
-          Istruzione e Informazione
+          Istruzione e Formazione
         </h1>
         <div className=" border-s-2  border-white p-3 sm:p-5  text-xl font-serif ">
           {EDUCATION_LIST?.map((item, experienceIndex) => (

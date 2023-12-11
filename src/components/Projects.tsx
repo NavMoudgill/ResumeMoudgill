@@ -27,7 +27,8 @@ const Projects = ({
             description={project.description}
             name={project.name}
             link={project.link}
-            photo={project.photo}
+            photo={project?.photo}
+            video={project?.video}
             hashtags={project.hashtags}
           />
         ))}

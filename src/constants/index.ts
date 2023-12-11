@@ -137,7 +137,8 @@ export interface ProjectsListProps {
   yr: String;
   name: String;
   link: String;
-  photo: String;
+  photo?: String;
+  video?: String;
   description?: String;
   hashtags: String[];
 }
@@ -145,7 +146,7 @@ export const PROJECTS_LIST: Array<ProjectsListProps> = [
   {
     yr: " 11/2023",
     name: "HooBank",
-    link: "https://github.com/NavMoudgill/facebookPageProject",
+    link: "https://navmoudgill.github.io/BankWebApp/",
     photo: "hooBank.png",
     description: "One Page Facebook Clone",
     hashtags: ["React", "JS", "HTML", "CSS", "VITE"],
@@ -168,11 +169,19 @@ export const PROJECTS_LIST: Array<ProjectsListProps> = [
     ],
   },
   {
-    yr: "12/2023",
+    yr: "09/2023",
     name: "News App",
-    link: "https://www.big-enterprise.online/",
-    photo: "newsChanel.png",
+    video: "news.mp4",
+    link: "https://github.com/NavMoudgill/NewsApp",
     description: "newsChanel",
+    hashtags: ["React", "JS", "HTML", "CSS"],
+  },
+  {
+    yr: "07/2023",
+    name: "iNotebook",
+    video: "inote.mp4",
+    link: "https://www.big-enterprise.online/",
+    description: "Notebook for saving notes",
     hashtags: ["React", "JS", "HTML", "CSS"],
   },
 ];

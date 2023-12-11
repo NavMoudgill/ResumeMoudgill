@@ -1,29 +1,45 @@
-import React from "react";
+import React, { Suspense } from "react";
 interface ProjectCardProps {
   description: String | undefined;
   name: String;
   link: String;
-  photo: String;
+  photo?: String;
+  video?: String;
   hashtags: String[];
 }
 import { gradientClassNames } from "../../constants";
 import { FaGithub } from "react-icons/fa6";
 import { LazyLoadImage } from "react-lazy-load-image-component";
+import CircularProgress from "./CircularProgress";
 const ProjectCard = ({
   description,
   name,
   link,
   photo,
+  video,
   hashtags,
 }: ProjectCardProps): React.ReactElement => {
   return (
     <div className=" shadow-lg shadow-indigo-300/50 hover:shadow-blue-300 min-h-[420px] p-5   rounded-2xl w-full sm:w-[360px] bg-[#0a1725]">
       <div className="h-[230px] w-full relative group overflow-hidden">
-        <LazyLoadImage
-          src={`${photo}`}
-          alt={`${name}`}
-          className="group-hover:rotate-1 h-full w-full object-contain rounded-2xl group-hover:scale-110 trasnform transition-all duration-1000 ease-in-out "
-        />
+        <Suspense fallback={<CircularProgress />}>
+          {photo ? (
+            <LazyLoadImage
+              src={`${photo}`}
+              alt={`${name}`}
+              className="group-hover:rotate-1 h-full w-full object-contain rounded-2xl group-hover:scale-110 trasnform transition-all duration-1000 ease-in-out "
+            />
+          ) : (
+            <video
+              autoPlay
+              loop
+              muted
+              className="group-hover:rotate-1 h-full w-full object-contain rounded-2xl group-hover:scale-110 trasnform transition-all duration-1000 ease-in-out"
+            >
+              <source src={video as string} type="video/mp4" />
+            </video>
+          )}
+        </Suspense>
         <div className=" absolute inset-0 flex justify-end m-3 ">
           <div
             className="w-10 h-10 bg-black rounded-full flex justify-center items-center cursor-pointer"

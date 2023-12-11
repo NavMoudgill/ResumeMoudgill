@@ -1,13 +1,17 @@
+import { Suspense } from "react";
 import { LazyLoadImage } from "react-lazy-load-image-component";
+import CircularProgress from "./sharedComponents/CircularProgress";
 
 const Home = () => {
   return (
     <div id="home" className="relative  lg:h-[95vh] h-[81vh] ">
-      <LazyLoadImage
-        src="./home.jpg"
-        alt="webDevelopment"
-        className="h-full w-[100%]"
-      />
+      <Suspense fallback={<CircularProgress />}>
+        <LazyLoadImage
+          src="./home.jpg"
+          alt="webDevelopment"
+          className="h-full w-[100%]"
+        />
+      </Suspense>
       <div className="bg-white p-3 typewriter rounded-xl absolute top-[15rem] left-[4rem] text-2xl font-serif">
         <h1>Junior Web Developer </h1>
         <h2 className=""> Re@dy to work</h2>

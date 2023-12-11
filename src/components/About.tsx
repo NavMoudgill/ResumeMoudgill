@@ -10,7 +10,7 @@ const About = ({
     >
       <div className="my-10 lg:mx-5">
         <div ref={val} className={`text-3xl mb-5 text-black card`}>
-          About
+          Introduzione
         </div>
         <div className="border-s-2  border-gray-800 p-5  text-xl font-serif text-gray-700">
           Sono una persona socievole, allegra, puntuale e ben ordinata. Sono

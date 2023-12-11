@@ -1,6 +1,7 @@
-import { useState } from "react";
+import { Suspense, useState } from "react";
 import { SlideProps, ExperienceListProps } from "../../constants";
 import { LazyLoadImage } from "react-lazy-load-image-component";
+import CircularProgress from "./CircularProgress";
 
 interface SlideshowProps {
   EXPERIENCE_IMAGES: Array<SlideProps>;
@@ -47,7 +48,9 @@ const Slideshow = ({
           className={`mySlides ${slideIndex === index ? "active" : ""}`}
         >
           {slideIndex === index && (
-            <LazyLoadImage src={slide.photo} alt={slide.caption} />
+            <Suspense fallback={<CircularProgress />}>
+              <LazyLoadImage src={slide.photo} alt={slide.caption} />
+            </Suspense>
           )}
 
           <div className="p-2 absolute top-3 left-7 sm:top-20  lg:top-25 sm:left-[3.76rem] text-gray-600">
