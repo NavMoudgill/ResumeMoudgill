@@ -28,7 +28,7 @@ body::-webkit-scrollbar-thumb {
   height: 100%;
   border-radius: 50%;
   border: 6px solid #d6d6d6;
-  border-top: 6px solid #3498db; /* Change color as needed */
+  border-top: 6px solid #3498db; 
   animation: spin 2s linear infinite;
 }
 

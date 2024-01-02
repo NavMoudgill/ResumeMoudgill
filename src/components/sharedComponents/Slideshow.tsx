@@ -55,7 +55,7 @@ const Slideshow = ({
 
           <div className="p-2 absolute top-3 left-7 sm:top-20  lg:top-25 sm:left-[3.76rem] text-gray-600">
             <h1
-              className="text-[#3a3535] text-2xl sm:text-3xl lg:text-4xl mb-2 sm:mb-5 card animate-spin"
+              className="text-black  text-2xl sm:text-3xl lg:text-4xl mb-2 sm:mb-5 card animate-spin"
               ref={val}
             >
               {heading}:
