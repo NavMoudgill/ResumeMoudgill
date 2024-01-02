@@ -180,7 +180,7 @@ export const PROJECTS_LIST: Array<ProjectsListProps> = [
     yr: "07/2023",
     name: "iNotebook",
     video: "inote.mp4",
-    link: "https://www.big-enterprise.online/",
+    link: "https://github.com/NavMoudgill/inotebook",
     description: "Notebook for saving notes",
     hashtags: ["React", "JS", "HTML", "CSS"],
   },
