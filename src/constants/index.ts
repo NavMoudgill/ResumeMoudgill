@@ -113,15 +113,16 @@ export const EXPERIENCE_LIST: Array<ExperienceListProps> = [
     companyName: "Mediatrice di lingua Punjabi,Inglese-Italiano",
   },
   {
-    yr: "2021 - 2022",
-    place: "Latina, Italia",
-    companyName: "Traduttrice in Procura di Latina",
-  },
-  {
-    yr: "2020 - 2019",
+    yr: "2020 - 2021",
     place: "Latina, Italia",
     companyName: "L'insegnante in Astrolabio",
   },
+  {
+    yr: "2019 - 2020",
+    place: "Latina, Italia",
+    companyName: "Traduttrice in Procura di Latina",
+  },
+
   {
     yr: "2018 - 2022",
     place: "G.Marconi,Latina",
