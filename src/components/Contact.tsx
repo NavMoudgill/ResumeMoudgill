@@ -63,7 +63,10 @@ const Contact = ({
     }
   };
   return (
-    <div className="relative text-white  justify-center flex flex-col items-start  bg-black min-h-[85vh] ">
+    <div
+      id="contact"
+      className="relative text-white  justify-center flex flex-col items-start  bg-black min-h-[85vh] "
+    >
       <Suspense fallback={<CircularProgress />}>
         <video muted autoPlay loop className="min-h-[85vh] object-cover ">
           <source src="contact.mp4" type="video/mp4" />
